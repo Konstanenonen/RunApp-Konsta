@@ -1,0 +1,25 @@
+<!------------Pauliina 2000603---------------------->
+<ion-content [fullscreen]="true">
+  <ion-slides pager="true">
+    <!------------slide number one---------------------->
+    <ion-slide>
+      <div class="imgStyle">
+        <img src="../assets/logo.png" width="50%" height="50%" />
+      </div>
+      <h2><b>Welcome to RunApp!</b></h2>
+      <p>
+        This app is for all you runners out there: with RunApp you can record
+        your running distance, time and length.
+      </p>
+    </ion-slide>
+    <!------------slide number two---------------------->
+    <ion-slide>
+      <div class="imgStyle">
+        <img src="../assets/logo.png" width="50%" height="50%" />
+      </div>
+      <p class="secondP">Are you ready to start your running journey?</p>
+      <!------------button which opens the home page---------------------->
+      <ion-button color="primary" (click)="btnClicked()">Let's go!</ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

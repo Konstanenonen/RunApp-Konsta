@@ -1,0 +1,36 @@
+<!-- section done by Olivia Ekholm 2001411-->
+<ion-app>
+
+  <ion-menu contentId="main-content" type ="overlay" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Where to?</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" *ngFor="let nav of NAV">
+          <ion-item 
+            routerDirection="root" 
+             [routerLink]="nav.link" 
+             [class.active-menu]="active === nav.link">
+              {{nav.name}}
+              <ion-icon slot="start" [ios]="nav.icon + '-outline'" [md]="nav.icon + '-sharp'"></ion-icon>  
+          </ion-item>
+        </ion-menu-toggle>
+    </ion-list>
+    </ion-content>
+    <!-- adding a logout function to the side menu-->
+    <ion-menu-toggle>
+      <ion-button expand = "block" color= "warning">
+      <ion-footer (click)="logout()">
+        <p>Logout</p>
+    </ion-footer> 
+  </ion-button>
+</ion-menu-toggle>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content" main></ion-router-outlet>
+
+</ion-app>

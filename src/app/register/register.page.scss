@@ -1,0 +1,33 @@
+ion-content {
+  --background: linear-gradient(
+    90deg,
+    rgba(255, 231, 128, 1) 0%,
+    rgba(255, 182, 128, 1) 100%
+  );
+  --padding-start: 10%;
+  --padding-end: 10%;
+}
+
+.input-group {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.errors {
+  font-size: small;
+  color: #fff;
+  background: var(--ion-color-danger);
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.form{
+  margin-top: 40px;
+}

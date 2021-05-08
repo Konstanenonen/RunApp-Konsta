@@ -1,0 +1,138 @@
+<!--Done by -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <img src="../assets/logo.png" width="25%" height="25%" />
+    </ion-title>
+
+    <!-- Side menu -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!--numero-->
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Insert your run!</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here you can submit your running data.
+    </ion-card-content>
+  </ion-card>
+
+  <!--creating a form for all the values-->
+  <form [formGroup]="runningForm" (ngSubmit)="CreateRun()">
+    <!--creating input section-->
+    <ion-item>
+      <ion-label position="floating">Distance</ion-label>
+      <ion-input formControlName="Distance"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Time</ion-label>
+      <ion-input formControlName="Time"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Date</ion-label>
+      <ion-input formControlName="Date"></ion-input>
+    </ion-item>
+
+    <!--creating submit button for the adding values-->
+    <ion-item>
+      <ion-button (click)="CreateRun()" [disabled]="runningForm.invalid">
+        <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+        &nbsp;Create Run
+      </ion-button>
+    </ion-item>
+  </form>
+
+  <!-- Creating a card that displays all the values from firebase storage---------------------->
+  <ion-card *ngFor="let item of RunList" color="primary">
+    <span *ngIf="!item.isEdit; else elseBlock">
+      <!-------displays values------------------------>
+      <ion-card-header>
+        <ion-card-title> Distance: {{item.Distance}}Km</ion-card-title>
+        <ion-card-title> Time: {{item.Time}}h</ion-card-title>
+        <ion-card-subtitle>From: {{item.Date}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- creating edit button incase of input been wrong-->
+        <ion-button
+          shape="round"
+          color="secondary"
+          size="small"
+          (click)="EditRun(item)"
+        >
+          <ion-icon size="small" slot="icon-only" name="create"></ion-icon>
+        </ion-button>
+
+        <!--Created a remove button just in case-->
+        <ion-button
+          shape="round"
+          color="danger"
+          size="small"
+          (click)="RemoveRun(item.id)"
+        >
+          <ion-icon size="small" slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </span>
+    <ng-template #elseBlock>
+      <ion-card-header>
+        <!--another card for update function. so that it can display information to update-->
+        <ion-card-title>
+          <ion-grid>
+            <ion-row>
+              <ion-col> Edit</ion-col>
+              <ion-col>
+                <ion-button
+                  fill="solid"
+                  color="medium"
+                  size="small"
+                  (click)="item.isEdit = false"
+                >
+                  Cancel
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <!-------------update button for new values----------------------->
+                <ion-button
+                  fill="solid"
+                  color="success"
+                  size="small"
+                  (click)="UpdateRun(item)"
+                >
+                  Update
+                </ion-button>
+                <!-------------update button for new values----------------------->
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!------------displays information inside the update function---------------------->
+        <ion-item>
+          <ion-label><strong>Distance:</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditDistance"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label><strong>Time:</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditTime"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label><strong>Date:</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditDate"></ion-input>
+        </ion-item>
+        <!------------displays information inside the update function---------------------->
+      </ion-card-content>
+    </ng-template>
+  </ion-card>
+  <!------------------------------------------------------------------------------------------------------->
+</ion-content>

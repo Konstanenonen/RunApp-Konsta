@@ -1,0 +1,56 @@
+<!-- page done by Olivia Ekholm 2001411 -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <img src="../assets/logo.png" width="25%" height="25%"/>
+    </ion-title>
+
+    <!-- Hamburger -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><b>Connect us via</b></ion-card-title>
+    </ion-card-header>
+
+    <!-- links with logos -->
+    <!-- added some padding between linkbuttons -->
+    <ion-card-content>
+      <ion-item class="linkButton" href="https://www.instagram.com">
+        <ion-icon class="customIcon" name="logo-instagram" size="large"></ion-icon>
+        <ion-text>RunApp_official</ion-text>
+      </ion-item>
+
+      <ion-item class="linkButton" href="https://www.facebook.com">
+        <ion-icon class="customIcon" name="logo-facebook" size="large"></ion-icon>
+        <ion-text> RunApp</ion-text>
+      </ion-item>
+
+      <ion-item class="linkButton" href="https://www.twitter.com">
+        <ion-icon class="customIcon" name="logo-twitter" size="large"></ion-icon>
+        <ion-text> Official_RunApp</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- contact information -->
+  <ion-card>
+    <ion-card-content>
+      <p><b>e-mail:</b> runapp@run.com</p>
+      <p><b>phone:</b> 0123456789</p>
+      <br />
+      <p><b>RUN App Inc.</b></p>
+      <!-- added a link to google maps and the runapp logo -->
+      <ion-item class="map" href="https://www.google.com/maps/place/353+Oak+St,+San+Francisco,+CA+94102,+Yhdysvallat/@37.7746237,-122.4250236,17z/data=!3m1!4b1!4m13!1m7!3m6!1s0x80859a6d00690021:0x4a501367f076adff!2sSan+Francisco,+Kalifornia,+Yhdysvallat!3b1!8m2!3d37.7749295!4d-122.4194155!3m4!1s0x808580a1f188c519:0x55ccdea8a44e0a13!8m2!3d37.7746237!4d-122.4250236">
+        <ion-text>353 Oak St, San Francisco
+          CA 94102, USA
+        </ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

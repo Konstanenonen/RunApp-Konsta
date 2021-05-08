@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "runapp-3bda3"
+  },
+  "targets": {
+    "runapp-3bda3": {
+      "hosting": {
+        "app": [
+          "runapp-3bda3"
+        ]
+      }
+    }
+  }
+}

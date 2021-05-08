@@ -1,0 +1,73 @@
+// Done by Pauliina 2000603
+// background of the card
+.card-background {
+  ion-card-content {
+    position: absolute;
+    top: 20%;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    text-align: center;
+  }
+
+  text-align: center;
+  padding: 0px;
+}
+// styling for slides
+ion-slides {
+  height: 100%;
+}
+
+ion-slide {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: block;
+}
+
+.swiper-slide h2 {
+  margin-top: 2.8rem;
+}
+
+.swiper-slide img {
+  max-height: 50%;
+  max-width: 80%;
+  margin: 60px 0 40px;
+  pointer-events: none;
+}
+
+// paragraph styling for slides
+p {
+  padding: 10px 40px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.secondP {
+  padding: 40px 10px 0px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+// background styling
+
+ion-content {
+  --background: linear-gradient(
+    90deg,
+    rgba(255, 231, 128, 1) 0%,
+    rgba(255, 182, 128, 1) 100%
+  );
+  --padding-start: 10%;
+  --padding-end: 10%;
+}
+
+// image styling
+.imgStyle {
+  margin-top: 60px;
+}

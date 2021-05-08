@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <img src="../assets/logo.png" width="25%" height="25%" />
+    </ion-title>
+
+    <!-- Hamburger -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!--Improved UI/UX in home/progress page by Konsta 2001353-->
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <!--Changed welcoming text from to be less intruding Konsta 2001353-->
+      <ion-col>
+        <h1 style="margin-left: 8%">Run App</h1>
+        <h5 style="margin-left: 8%" color="medium">
+          It's a good day for a run!
+        </h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <!--Changed this section from ionic cards to ionic list which makes it less noisier and improves reading experience Konsta 2001353-->
+        <ion-list inset="true">
+          <ion-item color="secondary">
+            <ion-label color="dark">Average Distance:</ion-label>
+            <ion-note color="dark" slot="end"><strong>10 km</strong></ion-note>
+          </ion-item>
+
+          <ion-item color="secondary">
+            <ion-label color="dark">Average Duration:</ion-label>
+            <ion-note color="dark" slot="end"><strong>1.15 h</strong></ion-note>
+          </ion-item>
+          <!--Also made this button be part of the list so it fits better with other elements in this page. Again improving UI/UX Konsta 2001353-->
+          <ion-item color="warning" button (click)="btnClicked()">
+            <ion-label> Tap to input your latest run </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <!------------Tip of the Day card, Pauliina 2000603 ------------->
+        <ion-row>
+          <ion-col>
+            <div class="card-background">
+              <img src="../assets/backgroundimg1.png" />
+              <ion-card-content id="tipText"
+                >Have a running schedule!</ion-card-content
+              >
+            </div>
+            <p class="ion-text-right">
+              <!------------button which changes the text--------------->
+              <ion-button size="small" fill="clear" (click)="changeText()"
+                >Next Tip <ion-icon name="arrow-forward-outline"></ion-icon
+              ></ion-button>
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
