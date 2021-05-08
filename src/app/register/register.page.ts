@@ -1,4 +1,4 @@
-// section done by Konsta 2001353
+// section done by Konsta Nenonen 2001353
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AuthenticationService } from '../services/authentication.service';
