@@ -1,4 +1,4 @@
-
+<!--Made readme file with step-by-step manual, pictures, and fun emojies Konsta Nenonen 2001353-->
 # 📜 RUNAPP STEP-BY-STEP MANUAL 📜
 
 This is a Step-by-step user manual that teaches how to use RunApp.

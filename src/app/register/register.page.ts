@@ -14,7 +14,7 @@ export class RegisterPage implements OnInit {
   errorMessage: string = '';
   successMessage: string = '';
   
-//validating requirements Konsta 2001353
+//validating requirements Konsta Nenonen 2001353
   validation_messages = {
     'email': [
       { type: 'required', message: 'Email is required.' },
@@ -33,7 +33,7 @@ export class RegisterPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    // checks that the email and password can be used. konsta 2001353
+    // checks that the email and password can be used. Konsta Nenonen 2001353
     this.validations_form = this.formBuilder.group({
       email: new FormControl('', Validators.compose([
         Validators.required,
@@ -46,7 +46,7 @@ export class RegisterPage implements OnInit {
     });
   }
 //
-// checks that there are not two of the same emails. konsta 2001353
+// checks that there are not two of the same emails. Konsta Nenonen 2001353
   tryRegister(value) {
     this.authService.registerUser(value)
       .then(res => {
@@ -61,7 +61,7 @@ export class RegisterPage implements OnInit {
   }
 //
   goLoginPage() {
-    this.navCtrl.navigateBack('');// navigates back to login page. Konsta 2001353
+    this.navCtrl.navigateBack('');// navigates back to login page. Konsta Nenonen 2001353
   }
 
 }
