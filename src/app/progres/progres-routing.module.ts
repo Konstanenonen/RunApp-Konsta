@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: ProgresPage
   },
-  //Added this path for the button to work konsta 2001353
+  //Added this path for the button to work Konsta Nenonen 2001353
   {
     path: 'input',
      loadChildren: () => import('../input/input.module').then(m => m.InputPageModule)

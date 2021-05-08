@@ -27,7 +27,7 @@ export class ProgresPage implements OnInit {
     //shows random tip in the textBox
     textBox.innerHTML = array[random];
   }
-  //This function makes the button direct to input page Konsta 2001353
+  //This function makes the button direct to input page Konsta Nenonen 2001353
   btnClicked() {
     this.router.navigate(['input']);
   }
